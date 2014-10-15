@@ -2,13 +2,17 @@ exports.config = {
   paths: {
     "public": 'www'
   },
+  modules: {
+    definition: false,
+    wrapper: false
+  },
   files: {
     javascripts: {
       joinTo: {
-        'javascripts/app.js': /^app/,
-        'javascripts/vendor.js': /^(vendor|bower_components)/,
-        'test/javascripts/test.js': /^test(\/|\\)(?!vendor)/,
-        'test/javascripts/test-vendor.js': /^test(\/|\\)(?=vendor)/
+        'js/app.js': /^app/,
+        'js/vendor.js': /^(vendor|bower_components)/,
+        'test/js/test.js': /^test(\/|\\)(?!vendor)/,
+        'test/js/test-vendor.js': /^test(\/|\\)(?=vendor)/
       },
       order: {
         before: []
@@ -16,9 +20,9 @@ exports.config = {
     },
     stylesheets: {
       joinTo: {
-        'stylesheets/app.css': /^app/,
-        'stylesheets/vendor.css': /^(vendor|bower_components)/,
-        'test/stylesheets/test.css': /^test/
+        'css/app.css': /^app/,
+        'css/vendor.css': /^(vendor|bower_components)/,
+        'test/css/test.css': /^test/
       },
       order: {
         before: [],
